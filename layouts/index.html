@@ -1,0 +1,136 @@
+{{ define "main" }}
+  <div class="p-5">
+    <section id="home" class="max-w-screen-xl mx-auto flex items-center justify-between pt-8 gap-10 mt-24 lg:mt-32">
+      <div>
+        <h2 class="text-[36px] lg:text-[64px] leading-tight font-bold"><span class="text-primary">
+          Online</span> Music
+        </h2>
+        <h2 class="text-[36px] lg:text-[64px] leading-tight font-bold">
+          Collaboration <span class="text-primary">Platform</span>
+        </h2>
+        <p class="text-gray mt-3 leading-normal text-base lg:text-xl">
+          Lorem ispum dolor si amet jue viole grace
+        </p>
+  
+        <!-- show on mobile, hide on desktop -->
+        <div class="block lg:hidden mt-10 mb-20 px-4">
+          <img class="frame" src="/images/hero-image.png" alt=""> 
+        </div>
+  
+        <div class="mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-12">
+          <a href="#" class="flex items-center justify-center w-full px-8 py-2.5 rounded-md border border-primary bg-secondary hover:bg-black transition">
+            Learn More
+          </a>
+          <a href="#" class="flex items-center justify-center w-full gap-2 px-8 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">
+            Try Now <img src="/images/play-icon.svg" alt="">
+          </a>
+        </div>
+      </div>
+  
+      <!-- show on desktop, hide on mobile -->
+      <div class="hidden lg:block px-4">
+        <img class="frame" src="/images/hero-image.png" alt=""> 
+      </div>
+    </section>
+  
+    <section id="application" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 ">
+      <div class="rounded-t-lg bg-secondary w-full p-3 flex items-center gap-3">
+        <div class="bg-[#FF4848] h-3 w-3 rounded-full"></div>
+        <div class="bg-[#FFC148] h-3 w-3 rounded-full"></div>
+        <div class="bg-[#78FF48] h-3 w-3 rounded-full"></div>
+      </div>
+      <img class="hidden lg:block w-full" src="/images/app.png" alt="">
+      <img class="block lg:hidden w-full" src="/images/app-mobile.png" alt="">
+    </section>
+  
+    <section id="about" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full">
+      <div class="px-4">
+        <img class="frame-2" src="/images/about.png" alt="">
+      </div>
+      <div class="w-full lg:w-[45%] mt-10 lg:mt-0">
+        <h2 class="text-[32px] lg:text-[64px] leading-normal font-bold mb-3"><span class="text-primary">About</span> Soundtown</h2>
+        <p class="text-gray text-xl font-medium">
+          SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them.
+        </p>
+      </div>
+    </section>
+  
+  
+    <!-- Slider main container -->
+    <section id="testimonial" class="swiper max-w-screen-xl mx-auto mt-36 lg:mt-60">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="relative p-3 bg-white h-max">
+            <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
+            <div class="p-3">
+              <img class="relative w-full" src="/images/m1.png" alt="">
+            </div>
+            <div class="p-3 mt-2">
+              <h2 class="text-secondary text-4xl font-semibold mb-5">
+                Abanz Levana
+              </h2>
+              <p class="text-gray text-xl font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam dictum magna sociis arcu etiam cursus. Eget molestie donec et molestie ut a maecenas. Purus pharetra dictumst purus consequat sed orci facilisi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative p-3 bg-white h-max">
+            <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
+            <div class="p-3">
+              <img class="relative w-full" src="/images/m2.png" alt="">
+            </div>
+            <div class="p-3 mt-2">
+              <h2 class="text-secondary text-4xl font-semibold mb-5">
+                John Doe
+              </h2>
+              <p class="text-gray text-xl font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit diam dic...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="relative p-3 bg-white h-max">
+            <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
+            <div class="p-3">
+              <img class="relative w-full" src="/images/m3.png" alt="">
+            </div>
+            <div class="p-3 mt-2">
+              <h2 class="text-secondary text-4xl font-semibold mb-5">
+                Xie Tzuyu
+              </h2>
+              <p class="text-gray text-xl font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit diam dic...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- If we need navigation buttons -->
+      <div class="flex items-center justify-end mt-5">
+        <div class="swiper-prev-slide rounded-l-md bg-secondary hover:bg-[#242424] transition px-3 py-2">
+          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.4401 25.6364C18.2409 25.637 18.044 25.5931 17.8641 25.5077C17.6841 25.4223 17.5255 25.2977 17.4001 25.143L10.9601 17.143C10.7639 16.9044 10.6567 16.6052 10.6567 16.2964C10.6567 15.9875 10.7639 15.6883 10.9601 15.4497L17.6267 7.44969C17.853 7.1774 18.1783 7.00617 18.5308 6.97366C18.8834 6.94115 19.2344 7.05004 19.5067 7.27635C19.779 7.50267 19.9502 7.82789 19.9827 8.18046C20.0153 8.53302 19.9064 8.88406 19.6801 9.15635L13.7201 16.303L19.4801 23.4497C19.6431 23.6454 19.7467 23.8837 19.7785 24.1365C19.8103 24.3892 19.7691 24.6458 19.6597 24.8758C19.5503 25.1058 19.3773 25.2997 19.1611 25.4345C18.945 25.5693 18.6948 25.6393 18.4401 25.6364Z" fill="white"/>
+          </svg>        
+        </div>
+        <div class="swiper-next-slide rounded-r-md bg-secondary hover:bg-[#242424] transition px-3 py-2">
+          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3334 25.6363C13.0218 25.6369 12.7199 25.5284 12.48 25.3296C12.345 25.2177 12.2334 25.0802 12.1516 24.9251C12.0698 24.77 12.0194 24.6002 12.0033 24.4256C11.9872 24.251 12.0057 24.0749 12.0578 23.9074C12.1098 23.7399 12.1944 23.5844 12.3067 23.4496L18.28 16.303L12.52 9.14298C12.4093 9.0066 12.3266 8.84967 12.2767 8.68122C12.2267 8.51276 12.2106 8.33611 12.2292 8.1614C12.2478 7.9867 12.3007 7.81739 12.385 7.66321C12.4692 7.50903 12.5831 7.37301 12.72 7.26298C12.858 7.1416 13.0195 7.05004 13.1946 6.99406C13.3696 6.93807 13.5543 6.91887 13.7371 6.93765C13.9199 6.95643 14.0968 7.01279 14.2568 7.10319C14.4167 7.19359 14.5563 7.31608 14.6667 7.46298L21.1067 15.463C21.3028 15.7016 21.41 16.0008 21.41 16.3096C21.41 16.6185 21.3028 16.9177 21.1067 17.1563L14.44 25.1563C14.3063 25.3177 14.1364 25.4452 13.9441 25.5286C13.7518 25.612 13.5426 25.6489 13.3334 25.6363Z" fill="#30B561"/>
+          </svg>
+        </div>
+      </div>
+  
+    </section>
+  </div>
+
+  <!-- <div class="w-full flex justify-center">
+    {{ template "_internal/pagination.html" . }}
+  </div>  -->
+
+{{end}}
+

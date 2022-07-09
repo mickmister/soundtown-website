@@ -1,0 +1,17 @@
+baseURL = ""
+languageCode = "id-ID"
+defaultContentLanguage = "id"
+title = "SoundTown"
+summaryLength = 10
+paginate = 8
+enableGitInfo = true
+pygmentsCodefences = true 
+pygmentsUseClasses = true
+
+[params]
+  site_name = "SoundTown"
+  description = ""
+  locale = "en-US"
+  type = "website"
+
+

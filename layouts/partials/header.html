@@ -1,0 +1,33 @@
+<header class="fixed top-0 left-0 w-full text-white z-30 {{ if .IsPage }} bg-secondary lg:bg-black {{ else }} bg-secondary {{ end }}">
+  <div class="max-w-screen-2xl mx-auto flex items-center justify-between px-5">
+    <div class="flex items-center justify-between relative w-full lg:w-auto h-full lg:h-auto bg-secondary lg:bg-transparent py-4 z-40">
+      <a href="/" class="text-xl font-medium flex gap-1 items-end">
+        <div class="font-black text-4xl text-primary">S</div>
+        <div class="pb-0.5">oundTown</div>
+      </a>
+      <button class="toggle-menu block lg:hidden">
+        <img src="/images/menu.svg">
+      </button>
+    </div>
+    <nav class="menu translate-y-[-150%] lg:translate-y-0">
+      <a href="#home" class="hover:text-primary transition">Home</a>
+      <a href="#application" class="hover:text-primary transition">Application</a>
+      <a href="#about" class="hover:text-primary transition">About</a>
+      <a href="#testimonial" class="hover:text-primary transition">Testimonial</a>
+      <a href="#contact" class="hover:text-primary transition">Contact</a>
+      <a href="/somepage" class="hover:text-primary transition">Some Page</a>
+
+      <!-- show on mobile, hide on desktop -->
+      <a href="" class="block lg:hidden hover:text-primary transition">Log in</a>
+      <a href="" class="block lg:hidden px-4 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">Create Account</a>
+
+    </nav>
+
+    <!-- show on desktop, hide on mobile -->
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="" class="hover:text-primary transition">Log in</a>
+      <a href="" class="block px-4 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">Create Account</a>
+    </div>
+  </div>
+</header>
+

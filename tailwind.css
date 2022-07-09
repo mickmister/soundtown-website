@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    
+  }
+}
+
+@layer components {
+  .menu {
+    @apply flex flex-col lg:flex-row items-start px-5 py-7 lg:p-0 lg:items-center gap-5 lg:gap-9 absolute lg:static top-16 inset-x-0 bg-secondary transition duration-500 z-30
+  }
+}
+
+@layer utilities {
+  .frame {
+    background: white;
+    box-shadow: 0 0 0 10px white, 0 0 0 16px #D9D9D9;
+  }
+  .frame-2 {
+    background: white;
+    box-shadow: 0 0 0 15px white, 0 0 0 20px #D9D9D9;
+  }
+}

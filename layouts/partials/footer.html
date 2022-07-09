@@ -1,0 +1,59 @@
+<footer id="contact" class="bg-secondary flex flex-col justify-center items-center py-6 mt-60">
+  <h1 class="text-xl font-medium flex gap-1 items-end">
+    <div class="font-black text-4xl text-primary">S</div>
+    <div class="pb-0.5">oundTown</div>
+  </h1>
+  <a href="#" class="flex items-center gap-3 bg-primary hover:bg-primary/90 transition px-4 py-3 rounded-md mt-10 mb-12">
+    <img src="/images/email.svg" alt="">
+    Contact Us
+  </a>
+
+  <div class="flex flex-col-reverse lg:flex-row items-center gap-9">
+    Soundtown &copy; 2022
+    <div class="space-x-9">
+      <a href="#" class="hover:text-primary transition">Privacy</a>
+      <a href="#" class="hover:text-primary transition">Terms</a>
+      <a href="#" class="hover:text-primary transition">Help</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toggle Menu -->
+<script>
+  const toggleMenu = document.querySelector('.toggle-menu')
+  const menu = document.querySelector('.menu')
+  toggleMenu.addEventListener('click', (e) => {
+    menu.classList.toggle('translate-y-[-150%]')
+  })
+</script>
+
+
+<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script> -->
+<script type="module">
+  import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+  const swiper = new Swiper('.swiper', {
+    // loop: true,
+    spaceBetween: 50,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-next-slide',
+      prevEl: '.swiper-prev-slide',
+      disabledClass: 'bg-primary-gray-50',
+      lockClass: 'hidden',
+    },
+
+    breakpoints: {
+      768: {
+        spaceBetween: 70,
+        slidesPerView: 2,
+      },
+      1024: {
+        spaceBetween: 100,
+        slidesPerView: 3,
+      },
+    },
+    
+
+  });
+</script>
