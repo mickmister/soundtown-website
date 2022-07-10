@@ -18,12 +18,23 @@
   </div>
 </footer>
 
-<!-- Toggle Menu -->
 <script>
+  // Toggle Menu
   const toggleMenu = document.querySelector('.toggle-menu')
   const menu = document.querySelector('.menu')
   toggleMenu.addEventListener('click', (e) => {
     menu.classList.toggle('translate-y-[-150%]')
+  })
+
+  // Line clamp
+  const readMores = document.querySelectorAll('.read-more')
+  readMores.forEach(readMore => {
+    readMore.addEventListener('click', () => {
+      console.log(readMore.parentElement.querySelector('.testimonial-description'));
+      const testimonialDesc = readMore.parentElement.querySelector('.testimonial-description')
+      testimonialDesc.classList.toggle('line-clamp-2')
+      readMore.innerText = testimonialDesc.classList.contains('line-clamp-2') ? 'Read more..' : 'Read less...'
+    })
   })
 </script>
 
