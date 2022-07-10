@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="canonical" href="{{ .Permalink | absURL }}" />
-  <meta name="description" content="{{ .Description }}">
   <meta property="og:locale" content="en_US" /> 
+  <meta name="description" content="{{ .Site.Params.Description }}">
   <meta property="og:type" content="{{ or .Type `website` }}" />
   <meta property="og:title" content="{{ .Title }}" />
   {{if .Description}}
