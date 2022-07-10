@@ -1,15 +1,15 @@
 {
-  "name": "codestuff",
+  "name": "soundtown",
   "version": "1.0.0",
-  "description": "Code Stuff adalah Website yang menyediakan semua yang dibutuhkan developers dari Tutorial, Article, Code Snippet, dan lain-lain",
+  "description": "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them.",
   "scripts": {
     "watch": "npx tailwindcss -i ./tailwind.css -o ./static/css/styles.css --watch --minify",
     "commit": "git add . && git commit -m"
   },
   "keywords": [
-    "blog"
+    "landing"
   ],
-  "author": "Huda Damar",
+  "author": "SoundTown",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.1.5"

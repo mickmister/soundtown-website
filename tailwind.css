@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 
-@layer base {
-  html {
-    
-  }
-}
-
 @layer components {
   .menu {
-    @apply flex flex-col lg:flex-row items-start px-5 py-7 lg:p-0 lg:items-center gap-5 lg:gap-9 absolute lg:static top-16 inset-x-0 bg-secondary transition duration-500 z-30
+    @apply flex flex-col lg:flex-row items-start px-5 py-7 lg:p-0 lg:items-center gap-5 lg:gap-9 absolute lg:static top-16 inset-x-0 bg-secondary lg:bg-transparent transition duration-500 z-30
   }
 }
 

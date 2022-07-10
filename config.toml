@@ -1,8 +1,12 @@
-baseURL = ""
+baseURL = "/"
 languageCode = "id-ID"
 defaultContentLanguage = "id"
 title = "SoundTown"
 summaryLength = 10
+RelativeURLs    = false
+CanonifyURLs    = true
+enableRobotsTXT = true
+enableEmoji     = true
 paginate = 8
 enableGitInfo = true
 pygmentsCodefences = true 
@@ -10,7 +14,7 @@ pygmentsUseClasses = true
 
 [params]
   site_name = "SoundTown"
-  description = ""
+  description = "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them."
   locale = "en-US"
   type = "website"
 
