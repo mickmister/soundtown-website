@@ -20,13 +20,12 @@
         class="rounded w-full"
         src="{{ .Params.thumbnail }}" 
         alt="{{.Title}}"
-        onerror="imageNotRender()"
       />
     </div>
   {{end}}
 
   <main class="prose mt-10 !max-w-screen-lg mx-auto prose-headings:text-white text-gray px-5 lg:px-0">
-    {{.Content}}
+    {{ .Content | safeHTML }}
   </main>
 
 {{end}}
