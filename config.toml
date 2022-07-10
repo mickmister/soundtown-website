@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://fiverr-soundtown.netlify.app"
 languageCode = "id-ID"
 defaultContentLanguage = "id"
 title = "SoundTown"
