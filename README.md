@@ -31,12 +31,6 @@ then run tailwindcss server
 npm run watch
 ```
 
-3. Generate Tailwind CSS (production)
-
-```
-npm run buildcss
-```
-
 Tailwind CSS file located at "./tailwindcss".
 Generated Tailwind CSS located at "./static/css/main.css".
 
