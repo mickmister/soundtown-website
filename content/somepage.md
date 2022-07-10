@@ -5,7 +5,7 @@ date: 2021-07-20T20:19:50+07:00
 draft: false
 toc: true
 keyword: [tutorial, website]
-# thumbnail: "/images/about.webp"
+# thumbnail: "/assets/images/about.webp"
 tags: [test, test2]
 categories: [tutorial]
 ---
