@@ -3,7 +3,7 @@
     <div class="font-black text-4xl text-primary">S</div>
     <div class="pb-0.5">oundTown</div>
   </h1> -->
-  <h1 class="ml-5 text-xl font-medium pb-0.5 first-letter:font-black first-letter:text-4xl first-letter:text-primary ">
+  <h1 class="site-title ml-5 text-xl font-medium flex items-end gap-0.5">
     {{ .Site.Params.Site_name }}
   </h1>
   <a href="{{ .Site.Params.Contact_us_url }}" class="flex items-center gap-3 bg-primary hover:bg-primary/90 transition px-4 py-3 rounded-md mt-10 mb-12">
@@ -23,13 +23,15 @@
 
 <script>
 
-  const headerTitle = document.querySelector('.header-title')
+  const siteTitles = document.querySelectorAll('.site-title')
   const landingTitle = document.querySelector('.landing-title')
   const landingSubtitle = document.querySelector('.landing-subtitle')
 
-  headerTitle.innerHTML = headerTitle.textContent.trim().split('').map((text, i) => {
-    return i == 0 ? `<div class="text-primary font-black text-4xl -mb-0.5">${text}</div>` : text
-  }).join('')
+  siteTitles.forEach(siteTitle => {
+    siteTitle.innerHTML = siteTitle.textContent.trim().split('').map((text, i) => {
+      return i == 0 ? `<div class="text-primary font-black text-4xl -mb-0.5">${text}</div>` : text
+    }).join('')
+  })
   
   landingTitle.innerHTML = givePrimaryColor(landingTitle, 0)
   landingSubtitle.innerHTML = givePrimaryColor(landingSubtitle, landingSubtitle.textContent.trim().split(' ').length - 1)
