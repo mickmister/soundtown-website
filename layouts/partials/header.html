@@ -1,9 +1,12 @@
 <header class="fixed top-0 left-0 w-full text-white z-30 {{ if .IsPage }} bg-secondary lg:bg-black {{ else }} bg-secondary {{ end }}">
   <div class="max-w-screen-2xl mx-auto flex items-center justify-between px-5">
     <div class="flex items-center justify-between relative w-full lg:w-auto h-full lg:h-auto bg-secondary lg:bg-transparent py-4 z-40">
-      <a href="/" class="text-xl font-medium flex gap-1 items-end">
+      <!-- <a href="/" class="text-xl font-medium flex gap-0.5 items-end">
         <div class="font-black text-4xl text-primary">S</div>
         <div class="pb-0.5">oundTown</div>
+      </a> -->
+      <a href="/" class="ml-5 text-xl font-medium pb-0.5 first-letter:font-black first-letter:text-4xl first-letter:text-primary ">
+        {{ .Site.Params.Site_name }}
       </a>
       <button name="menu" class="toggle-menu block lg:hidden">
         <img src="/assets/images/menu.svg" alt="menu">

@@ -2,26 +2,28 @@
   <div class="p-5">
     <section id="home" class="max-w-screen-xl mx-auto flex items-center justify-between pt-8 gap-10 mt-24 lg:mt-32">
       <div>
-        <h2 class="text-[36px] lg:text-[64px] leading-tight font-bold"><span class="text-primary">
-          Online</span> Music
+        <h2 class="landing-title text-[36px] lg:text-[64px] leading-tight font-bold">
+          {{ .Site.Params.Landing_title }}
         </h2>
-        <h2 class="text-[36px] lg:text-[64px] leading-tight font-bold">
-          Collaboration <span class="text-primary">Platform</span>
+        <h2 class="landing-subtitle text-[36px] lg:text-[64px] leading-tight font-bold">
+          {{ .Site.Params.Landing_subtitle }}
+          
         </h2>
         <p class="text-gray mt-3 leading-normal text-base lg:text-xl">
-          Lorem ispum dolor si amet jue viole grace
+          {{ .Site.Params.Landing_description }}
+          
         </p>
   
         <!-- show on mobile, hide on desktop -->
         <div class="block lg:hidden mt-10 mb-20 px-4">
-          <img class="frame" src="/assets/images/hero-image.webp" alt="hero"> 
+          <img class="frame" src="{{ .Site.Params.Hero_image }}" alt="hero"> 
         </div>
   
         <div class="mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-12">
-          <a href="#" class="flex items-center justify-center w-full lg:w-auto px-8 py-2.5 rounded-md border border-primary bg-secondary hover:bg-black transition">
+          <a href="{{ .Site.Params.Learn_more_url }}" class="flex items-center justify-center w-full lg:w-auto px-8 py-2.5 rounded-md border border-primary bg-secondary hover:bg-black transition">
             Learn More
           </a>
-          <a href="#" class="flex items-center justify-center w-full lg:w-auto gap-2 px-8 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">
+          <a href="{{ .Site.Params.Try_now_url }}" class="flex items-center justify-center w-full lg:w-auto gap-2 px-8 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">
             Try Now <img src="/assets/images/play-icon.svg" alt="play">
           </a>
         </div>
@@ -29,7 +31,7 @@
   
       <!-- show on desktop, hide on mobile -->
       <div class="hidden lg:block px-4">
-        <img class="frame" src="/assets/images/hero-image.webp" alt="hero"> 
+        <img class="frame" src="{{ .Site.Params.Hero_image }}" alt="hero"> 
       </div>
     </section>
   
@@ -39,8 +41,8 @@
         <div class="bg-[#FFC148] h-3 w-3 rounded-full"></div>
         <div class="bg-[#78FF48] h-3 w-3 rounded-full"></div>
       </div>
-      <img class="hidden lg:block w-full" src="/assets/images/app.webp" alt="app desktop version">
-      <img class="block lg:hidden w-full" src="/assets/images/app-mobile.webp" alt="app mobile version">
+      <img class="hidden lg:block w-full" src="{{ .Site.Params.App_image_on_desktop }}" alt="app desktop version">
+      <img class="block lg:hidden w-full" src="{{ .Site.Params.App_image_on_mobile }}" alt="app mobile version">
     </section>
   
     <section id="about" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full">
@@ -48,9 +50,9 @@
         <img class="frame-2" src="/assets/images/about.webp" alt="about">
       </div>
       <div class="w-full lg:w-[45%] mt-16 lg:mt-0">
-        <h2 class="text-[32px] lg:text-[64px] leading-normal font-bold mb-4"><span class="text-primary">About</span> Soundtown</h2>
+        <h2 class="text-[32px] lg:text-[64px] leading-normal font-bold mb-4"><span class="text-primary capitalize">About</span> {{ .Site.Params.Site_name }}</h2>
         <p class="testimonial-description line-clamp-2 text-gray text-xl font-medium">
-          SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them.
+          {{ .Site.Params.About}}
         </p>
       </div>
     </section>
@@ -61,57 +63,26 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
+        {{ range .Site.Params.Testimonials }}
         <div class="swiper-slide">
           <div class="relative p-3 bg-white h-max">
             <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
             <div class="p-3">
-              <img class="relative w-full" src="/assets/images/m1.webp" alt="testimonial">
+              <img class="relative w-full" src="{{ index . 0 }}" alt="testimonial">
             </div>
             <div class="p-3 mt-2">
               <h2 class="text-secondary text-4xl font-semibold mb-5">
-                Abanz Levana
+                {{ index . 1 }}
               </h2>
               <p class="testimonial-description line-clamp-2 text-gray text-xl font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam dictum magna sociis arcu etiam cursus. Eget molestie donec et molestie ut a maecenas. Purus pharetra dictumst purus consequat sed orci facilisi.
+                {{ index . 2 }}
               </p>
               <button class="read-more text-primary mt-2 font-medium">Read more...</button>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="relative p-3 bg-white h-max">
-            <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
-            <div class="p-3">
-              <img class="relative w-full" src="/assets/images/m2.webp" alt="testimonial">
-            </div>
-            <div class="p-3 mt-2">
-              <h2 class="text-secondary text-4xl font-semibold mb-5">
-                John Doe
-              </h2>
-              <p class="testimonial-description line-clamp-2 text-gray text-xl font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit diam dic
-              </p>
-              <button class="read-more text-primary mt-2 font-medium">Read more...</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="relative p-3 bg-white h-max">
-            <div class="absolute top-3 inset-x-3 bg-primary h-60"></div>
-            <div class="p-3">
-              <img class="relative w-full" src="/assets/images/m3.webp" alt="testimonial">
-            </div>
-            <div class="p-3 mt-2">
-              <h2 class="text-secondary text-4xl font-semibold mb-5">
-                Xie Tzuyu
-              </h2>
-              <p class="testimonial-description line-clamp-2 text-gray text-xl font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit diam dic
-              </p>
-              <button class="read-more text-primary mt-2 font-medium">Read more...</button>
-            </div>
-          </div>
-        </div>
+        {{ end }}
+        
       </div>
   
       <!-- If we need navigation buttons -->

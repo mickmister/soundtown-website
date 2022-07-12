@@ -1,19 +1,22 @@
 <footer id="contact" class="bg-secondary flex flex-col justify-center items-center py-6 mt-60">
-  <h1 class="text-xl font-medium flex gap-1 items-end">
+  <!-- <h1 class="text-xl font-medium flex gap-1 items-end">
     <div class="font-black text-4xl text-primary">S</div>
     <div class="pb-0.5">oundTown</div>
+  </h1> -->
+  <h1 class="ml-5 text-xl font-medium pb-0.5 first-letter:font-black first-letter:text-4xl first-letter:text-primary ">
+    {{ .Site.Params.Site_name }}
   </h1>
-  <a href="#" class="flex items-center gap-3 bg-primary hover:bg-primary/90 transition px-4 py-3 rounded-md mt-10 mb-12">
+  <a href="{{ .Site.Params.Contact_us_url }}" class="flex items-center gap-3 bg-primary hover:bg-primary/90 transition px-4 py-3 rounded-md mt-10 mb-12">
     <img src="/assets/images/email.svg" alt="email">
     Contact Us
   </a>
 
   <div class="flex flex-col-reverse lg:flex-row items-center gap-9">
-    Soundtown &copy; 2022
+    {{ .Site.Params.Site_name }} &copy; 2022
     <div class="space-x-9">
-      <a href="#" class="hover:text-primary transition">Privacy</a>
-      <a href="#" class="hover:text-primary transition">Terms</a>
-      <a href="#" class="hover:text-primary transition">Help</a>
+      <a href="{{ .Site.Params.Privacy_url }}" class="hover:text-primary transition">Privacy</a>
+      <a href="{{ .Site.Params.Terms_url }}" class="hover:text-primary transition">Terms</a>
+      <a href="{{ .Site.Params.Help_url }}" class="hover:text-primary transition">Help</a>
     </div>
   </div>
 </footer>
