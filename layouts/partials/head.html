@@ -9,27 +9,41 @@
   <meta name="description" content="{{ .Site.Params.Description }}">
   <meta property="og:type" content="{{ or .Type `website` }}" />
   <meta property="og:title" content="{{ .Title }}" />
-  {{if .Description}}
-  <meta name="og:description" content="{{ .Description }}">
-  {{ else if eq .Kind "section" }}
-  <meta name="og:description" content="{{ .Summary }}">
-  {{ else }}
-  <meta name="og:description" content="{{ .Site.Params.Description }}">
-  {{ end }}
   <meta property="og:url" content="{{ .Permalink | absURL }}" />
   <meta property="og:site_name" content="{{ .Site.Params.Site_name}}" />
-  <meta name="twitter:card" content="summary" />
+
+  {{if .Description}}
+    <meta name="og:description" content="{{ .Description }}">
+    <meta property="twitter:description" content="{{ .Description }}" />
+  {{ else if eq .Kind "section" }}
+    <meta name="og:description" content="{{ .Summary }}">
+    <meta property="twitter:description" content="{{ .Summary }}" />
+  {{ else }}
+    <meta name="og:description" content="{{ .Site.Params.Description }}">
+    <meta property="twitter:description" content="{{ .Site.Params.Description }}" />
+  {{ end }}
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="{{ .Permalink | absURL }}">
+  <meta property="twitter:title" content="{{ .Title }}" />
+  <meta property="twitter:image" content="{{ .Params.thumbnail | absURL }}" />
+
   {{ if .IsPage }}
-  <meta property="article:author" content="{{ or .Author .Site.Params.Author }}" />
-  <meta property="article:published_time" content="{{ .PublishDate.Format `20060102-15:04:05.000` }}" />
-  <meta property="article:modified_time" content="{{ .Page.Lastmod.Format `20060102-15:04:05.000` }}" />
-  <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
-  <meta property="og:image:width" content="945" />
-  <meta property="og:image:height" content="595" />
+    <meta property="article:author" content="{{ or .Author .Site.Params.Author }}" />
+    <meta property="article:published_time" content="{{ .PublishDate.Format `20060102-15:04:05.000` }}" />
+    <meta property="article:modified_time" content="{{ .Page.Lastmod.Format `20060102-15:04:05.000` }}" />
+    <meta property="og:image" content="{{ .Params.thumbnail | absURL }}" />
+    <meta property="og:image:width" content="945" />
+    <meta property="og:image:height" content="595" />
   {{ end }}
 
   <!-- Tailwindcss -->
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    :root {
+      --primary-color: {{ .Site.Params.Primary_color }}
+    } 
+  </style>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -22,6 +22,27 @@
 </footer>
 
 <script>
+
+  const headerTitle = document.querySelector('.header-title')
+  const landingTitle = document.querySelector('.landing-title')
+  const landingSubtitle = document.querySelector('.landing-subtitle')
+
+  headerTitle.innerHTML = headerTitle.textContent.trim().split('').map((text, i) => {
+    return i == 0 ? `<div class="text-primary font-black text-4xl -mb-0.5">${text}</div>` : text
+  }).join('')
+  
+  landingTitle.innerHTML = givePrimaryColor(landingTitle, 0)
+  landingSubtitle.innerHTML = givePrimaryColor(landingSubtitle, landingSubtitle.textContent.trim().split(' ').length - 1)
+
+  function givePrimaryColor (el, index) {
+    return el.textContent
+      .trim()
+      .split(' ')
+      .map((text, i) => i === index ?  `<span class="text-primary">${text}</span>` : text)
+      .join(' ')
+  }
+  
+
   // Toggle Menu
   const toggleMenu = document.querySelector('.toggle-menu')
   const menu = document.querySelector('.menu')
