@@ -23,7 +23,7 @@ pygmentsUseClasses = true
 
   landing_title = "Online Music Collaboration Platform"
   landing_description = "Lorem ispum dolor si amet jue viole grace"
-  background_image = "/assets/images/bg.png"
+  background_image = "/assets/images/bg.webp"
 
   learn_more_url = "#"
   try_now_url = "#"
