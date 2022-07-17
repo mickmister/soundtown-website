@@ -1,37 +1,31 @@
 {{ define "main" }}
-  <div class="p-5">
-    <section id="home" class="max-w-screen-xl mx-auto flex items-center justify-between pt-8 gap-10 mt-24 lg:mt-32">
-      <div>
-        <h2 class="landing-title text-[36px] lg:text-[64px] leading-tight font-bold">
+  
+    <section 
+      id="home" 
+      class="relative h-screen bg-[position:-120px_0] lg:bg-center bg-no-repeat bg-cover"
+      style="background-image: url('{{ .Site.Params.Background_image }}');"
+    >
+      <div class="absolute inset-0 w-full h-full bg-primary opacity-25"></div>
+      <div class="absolute inset-0 z-10 max-w-screen-xl flex flex-col items-start lg:items-center justify-center pb-28 px-5 lg:px-0 mx-auto h-full">
+        <h2 class="text-[30px] md:text-[40px] lg:text-[64px] leading-tight font-bold">
           {{ .Site.Params.Landing_title }}
         </h2>
-        <h2 class="landing-subtitle text-[36px] lg:text-[64px] leading-tight font-bold">
-          {{ .Site.Params.Landing_subtitle }}
-        </h2>
-        <p class="text-gray mt-3 leading-normal text-base lg:text-xl">
+        <p class="mt-3 leading-normal text-sm md:text-base lg:text-xl">
           {{ .Site.Params.Landing_description }}
         </p>
   
-        <!-- show on mobile, hide on desktop -->
-        <div class="block lg:hidden mt-10 mb-20 px-4">
-          <img class="frame" src="{{ .Site.Params.Hero_image }}" alt="hero"> 
-        </div>
-  
-        <div class="mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-12">
-          <a href="{{ .Site.Params.Learn_more_url }}" class="flex items-center justify-center w-full lg:w-auto px-8 py-2.5 rounded-md border border-primary bg-secondary hover:bg-black transition">
+        <div class="mt-8 md:mt-12 flex flex-row items-center gap-5 lg:gap-12">
+          <a href="{{ .Site.Params.Learn_more_url }}" class="flex items-center justify-center w-full lg:w-auto px-5 lg:px-8 py-2.5 text-sm lg:text-base rounded-md bg-secondary hover:bg-black transition">
             Learn More
           </a>
-          <a href="{{ .Site.Params.Try_now_url }}" class="flex items-center justify-center w-full lg:w-auto gap-2 px-8 py-2.5 rounded-md bg-primary hover:bg-primary/90 transition">
+          <a href="{{ .Site.Params.Try_now_url }}" class="flex items-center justify-center w-full lg:w-auto gap-2 px-5 lg:px-8 py-2.5 text-sm lg:text-base rounded-md bg-primary hover:bg-primary/90 transition whitespace-nowrap">
             Try Now <img src="/assets/images/play-icon.svg" alt="play">
           </a>
         </div>
       </div>
-  
-      <!-- show on desktop, hide on mobile -->
-      <div class="hidden lg:block px-4">
-        <img class="frame" src="{{ .Site.Params.Hero_image }}" alt="hero"> 
-      </div>
     </section>
+
+  <div class="p-5">
   
     <section id="application" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 ">
       <div class="rounded-t-lg bg-secondary w-full p-3 flex items-center gap-3">
@@ -99,6 +93,21 @@
   
     </section>
   </div>
+
+  <script>
+    const navbar =  document.querySelector('.navbar')
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50) {
+        navbar.classList.add('bg-secondary')
+        navbar.classList.remove('bg-transparent')
+      } else {
+        navbar.classList.remove('bg-secondary')
+        navbar.classList.add('bg-transparent')
+
+      }
+    })
+  </script>
 
 {{end}}
 

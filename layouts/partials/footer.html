@@ -24,32 +24,19 @@
 <script>
 
   const siteTitles = document.querySelectorAll('.site-title')
-  const landingTitle = document.querySelector('.landing-title')
-  const landingSubtitle = document.querySelector('.landing-subtitle')
 
   siteTitles.forEach(siteTitle => {
     siteTitle.innerHTML = siteTitle.textContent.trim().split('').map((text, i) => {
       return i == 0 ? `<div class="text-primary font-black text-4xl -mb-0.5">${text}</div>` : text
     }).join('')
   })
-  
-  landingTitle.innerHTML = givePrimaryColor(landingTitle, 0)
-  landingSubtitle.innerHTML = givePrimaryColor(landingSubtitle, landingSubtitle.textContent.trim().split(' ').length - 1)
-
-  function givePrimaryColor (el, index) {
-    return el.textContent
-      .trim()
-      .split(' ')
-      .map((text, i) => i === index ?  `<span class="text-primary">${text}</span>` : text)
-      .join(' ')
-  }
-  
 
   // Toggle Menu
   const toggleMenu = document.querySelector('.toggle-menu')
   const menu = document.querySelector('.menu')
   toggleMenu.addEventListener('click', (e) => {
     menu.classList.toggle('translate-y-[-150%]')
+    navbar.classList.toggle('!bg-secondary')
   })
 
   // Read more toggle on testimonial
@@ -90,7 +77,5 @@
         slidesPerView: 3,
       },
     },
-    
-
   });
 </script>

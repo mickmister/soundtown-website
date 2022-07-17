@@ -21,10 +21,9 @@ pygmentsUseClasses = true
 
   primary_color = "#30B561" # Green Color
 
-  landing_title = "Online Music"
-  landing_subtitle = "Collaboration Platform"
+  landing_title = "Online Music Collaboration Platform"
   landing_description = "Lorem ispum dolor si amet jue viole grace"
-  hero_image = "/assets/images/hero-image.webp"
+  background_image = "/assets/images/bg.png"
 
   learn_more_url = "#"
   try_now_url = "#"
