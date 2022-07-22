@@ -3,13 +3,13 @@ languageCode = "id-ID"
 defaultContentLanguage = "id"
 title = "SoundTown"
 summaryLength = 10
-RelativeURLs = false
+RelativeURLs = true
 CanonifyURLs = true
 enableRobotsTXT = true
 enableEmoji = true
 paginate = 8
 enableGitInfo = true
-pygmentsCodefences = true 
+pygmentsCodefences = true
 pygmentsUseClasses = true
 
 [params]
@@ -65,4 +65,3 @@ pygmentsUseClasses = true
   privacy_url = "#"
   terms_url = "#"
   help_url = "#"
-
