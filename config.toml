@@ -81,7 +81,7 @@ name = "mydeployment"
 URL = "s3://<Bucket Name>?region=<AWS region>"
 
 # If you are using a CloudFront CDN, deploy will invalidate the cache as needed.
-cloudFrontDistributionID = <ID>
+# cloudFrontDistributionID = <ID>
 
 # include = "**.html" # would only include files with ".html" suffix
 # exclude = "**.{jpg, png}" # would exclude files with ".jpg" or ".png" suffix
