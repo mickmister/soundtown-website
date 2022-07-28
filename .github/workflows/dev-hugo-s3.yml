@@ -1,4 +1,4 @@
-name: Hugo S3
+name: Hugo S3 Development
 
 on:
   pull_request:
@@ -21,3 +21,4 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+          target: development
