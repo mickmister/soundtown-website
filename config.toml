@@ -75,7 +75,7 @@ order = [".jpg$", ".gif$"]
 
 [[deployment.targets]]
 name = "development"
-URL = "s3://dev.sound.town?region=us-east-1"
+URL = "s3://sound.town?region=us-east-1"
 
 [[deployment.targets]]
 name = "production"
