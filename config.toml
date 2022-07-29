@@ -103,4 +103,5 @@ gzip = true
 
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
+cacheControl = "no-cache no-store must-revalidate"
 gzip = true
