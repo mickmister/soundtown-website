@@ -15,14 +15,14 @@ pygmentsUseClasses = true
 [params]
   author = "John Doe"
   site_name = "SoundTown"
-  description = "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them."
+  description = "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. Communicate across groups/teams of people, upload project files, and comment on specific parts of your audio files to share ideas."
   locale = "en-US"
   type = "website"
 
   primary_color = "#30B561" # Green Color
 
   landing_title = "Online Music Collaboration Platform"
-  landing_description = "Lorem ispum dolor si amet jue viole grace"
+  landing_description = "Private workspaces for communicating and sharing files"
   background_image = "/assets/images/bg.webp"
 
   learn_more_url = "#"
@@ -31,7 +31,7 @@ pygmentsUseClasses = true
   app_image_on_desktop = "/assets/images/app.webp"
   app_image_on_mobile = "/assets/images/app-mobile.webp"
 
-  about = "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. The main functionality at the moment is communication across groups/teams of people, uploading audio files and commenting on them."
+  about = "SoundTown is an online music collaboration platform, focused on iterating on small ideas into big ideas. Communicate across groups/teams of people, upload project files, and comment on specific parts of your audio files to share ideas."
 
   testimonials = [
     # [

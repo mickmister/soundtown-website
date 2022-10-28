@@ -1,7 +1,7 @@
 {{ define "main" }}
-  
-    <section 
-      id="home" 
+
+    <section
+      id="home"
       class="relative h-screen bg-[position:-120px_0] lg:bg-center bg-no-repeat bg-cover"
       style="background-image: url('{{ .Site.Params.Background_image }}');"
     >
@@ -13,7 +13,7 @@
         <p class="mt-3 leading-normal text-sm md:text-base lg:text-xl w-full lg:w-[75%] text-start lg:text-center">
           {{ .Site.Params.Landing_description }}
         </p>
-  
+
         <div class="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-center gap-5 lg:gap-12 w-full md:w-auto">
           <a href="{{ .Site.Params.Learn_more_url }}" class="flex items-center justify-center w-full lg:w-auto px-8 py-2.5 text-sm lg:text-base rounded-md bg-secondary hover:bg-black transition">
             Learn More
@@ -26,8 +26,8 @@
     </section>
 
   <div class="p-5">
-  
-    <section id="application" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 ">
+
+    <!-- <section id="application" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 ">
       <div class="rounded-t-lg bg-secondary w-full p-3 flex items-center gap-3">
         <div class="bg-[#FF4848] h-3 w-3 rounded-full"></div>
         <div class="bg-[#FFC148] h-3 w-3 rounded-full"></div>
@@ -35,8 +35,8 @@
       </div>
       <img class="hidden lg:block w-full" src="{{ .Site.Params.App_image_on_desktop }}" alt="app desktop version">
       <img class="block lg:hidden w-full" src="{{ .Site.Params.App_image_on_mobile }}" alt="app mobile version">
-    </section>
-  
+    </section> -->
+
     <section id="about" class="max-w-screen-xl mx-auto mt-36 lg:mt-60 flex flex-col lg:flex-row items-start lg:items-center justify-between w-full">
       <div class="px-4">
         <img class="frame-2" src="/assets/images/about.webp" alt="about">
@@ -48,8 +48,8 @@
         </p>
       </div>
     </section>
-  
-  
+
+
     <!-- Slider main container -->
     <section id="testimonial" class="swiper max-w-screen-xl mx-auto mt-36 lg:mt-60">
       <!-- Additional required wrapper -->
@@ -74,15 +74,15 @@
           </div>
         </div>
         {{ end }}
-        
+
       </div>
-  
+
       <!-- If we need navigation buttons -->
       <div class="flex items-center justify-end mt-5">
         <div class="swiper-prev-slide rounded-l-md bg-secondary hover:bg-[#242424] transition px-3 py-2 text-primary">
           <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.4401 25.6364C18.2409 25.637 18.044 25.5931 17.8641 25.5077C17.6841 25.4223 17.5255 25.2977 17.4001 25.143L10.9601 17.143C10.7639 16.9044 10.6567 16.6052 10.6567 16.2964C10.6567 15.9875 10.7639 15.6883 10.9601 15.4497L17.6267 7.44969C17.853 7.1774 18.1783 7.00617 18.5308 6.97366C18.8834 6.94115 19.2344 7.05004 19.5067 7.27635C19.779 7.50267 19.9502 7.82789 19.9827 8.18046C20.0153 8.53302 19.9064 8.88406 19.6801 9.15635L13.7201 16.303L19.4801 23.4497C19.6431 23.6454 19.7467 23.8837 19.7785 24.1365C19.8103 24.3892 19.7691 24.6458 19.6597 24.8758C19.5503 25.1058 19.3773 25.2997 19.1611 25.4345C18.945 25.5693 18.6948 25.6393 18.4401 25.6364Z" fill="currentColor"/>
-          </svg>        
+          </svg>
         </div>
         <div class="swiper-next-slide rounded-r-md bg-secondary hover:bg-[#242424] transition px-3 py-2 text-primary">
           <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@
           </svg>
         </div>
       </div>
-  
+
     </section>
   </div>
 
@@ -110,4 +110,3 @@
   </script>
 
 {{end}}
-
