@@ -26,7 +26,7 @@ pygmentsUseClasses = true
   background_image = "/assets/images/bg.webp"
 
   learn_more_url = "#"
-  try_now_url = "#"
+  try_now_url = "https://soundtown.app"
 
   app_image_on_desktop = "/assets/images/app.webp"
   app_image_on_mobile = "/assets/images/app-mobile.webp"
