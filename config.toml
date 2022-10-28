@@ -40,14 +40,14 @@ pygmentsUseClasses = true
       # 'Testimonial'
     # ],
     [
+      'https://assets.sound.town/jimmy.jpg',
+      'Jimmy Miller',
+      "I love how all the text that I write on my posts is queryable. I can search and find my tags so easily. It's fun to collaborate on music creations with my friends."
+    ],
+    [
       '/assets/images/m1.webp',
       'Abanz Levana',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam dictum magna sociis arcu etiam cursus. Eget molestie donec et molestie ut a maecenas. Purus pharetra dictumst purus consequat sed orci facilisi.'
-    ],
-    [
-      '/assets/images/m2.webp',
-      'John Doe',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam dictum magna sociis arcu etiam cursus.'
     ],
     [
       '/assets/images/m3.webp',
@@ -103,4 +103,5 @@ gzip = true
 
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
+cacheControl = "no-cache no-store must-revalidate"
 gzip = true
